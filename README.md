@@ -12,7 +12,7 @@ Made by [me](https://github.com/joveem/) while I was practicing the language (.j
 
 ### Test:
 
-Click to see the final result: [:computer:](https://htmlpreview.github.io/?https://github.com/joveem/Calculator-Javascritp-CSS/HTML/index.html)
+Click to see the final result: [:computer:](https://htmlpreview.github.io/?https://github.com/joveem/Calculator-Javascritp-CSS/blob/master/HTML/index.html)
 
 ---
 - 2020 - [joveem](https://github.com/joveem/)
