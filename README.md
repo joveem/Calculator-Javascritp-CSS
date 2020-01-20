@@ -1,6 +1,7 @@
 # Calculator-Javascritp-CSS
 ---
 ![](/Screenshots/scr_001.png)
+
 A single page calculator made in Javascript, with CSS styling.
 
 ---
