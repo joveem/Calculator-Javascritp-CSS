@@ -322,7 +322,7 @@
         operationButton(4)
     });
 
-    window.document.getElementById("op5").addEventListener("click", function(){
+    window.document.getElementById("op5").addEventListener("click", function () {
         setEsqualsSelected();
         equalsButton();
     });
@@ -366,28 +366,34 @@
 
     function operationButton(n_) {
 
-        if(!equals_selected){
+        if (!equals_selected) {
 
             equalsButton();
 
         }
 
         equals_selected = false;
-        
 
-        previous_number = Number.parseFloat(screen_number.textContent);
 
 
         operation_changed = true;
 
         previous_operation = n_;
 
-        operation_selected = true;
+        if (!operation_selected) {
+
+            operation_selected = true;
+
+            previous_number = Number.parseFloat(screen_number.textContent);
+
+        }
+
+
 
 
     }
 
-    function setEsqualsSelected(){
+    function setEsqualsSelected() {
 
         equals_selected = true;
 
