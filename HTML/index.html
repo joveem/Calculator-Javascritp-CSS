@@ -274,6 +274,8 @@
 
     var operation_selected = false;
 
+    var operation_recently_selected = false;
+
     var equals_selected = false;
 
 
@@ -336,6 +338,7 @@
         previous_operation = 0;
         operation_selected = false;
         operation_changed = false;
+        operation_recently_selected = false;
 
 
     });
@@ -360,33 +363,35 @@
             }
         }
 
+        operation_recently_selected = false;
 
 
     }
 
     function operationButton(n_) {
 
-        if (!equals_selected) {
+        if (!operation_recently_selected) {
 
-            equalsButton();
+            if (!equals_selected) {
+
+                equalsButton();
+
+            }
+
+            operation_recently_selected = true;
+
+            previous_number = Number.parseFloat(screen_number.textContent);
 
         }
-
-        equals_selected = false;
-
-
 
         operation_changed = true;
 
         previous_operation = n_;
 
-        if (!operation_selected) {
+        equals_selected = false;
 
-            operation_selected = true;
 
-            previous_number = Number.parseFloat(screen_number.textContent);
-
-        }
+        operation_selected = true;
 
 
 
@@ -394,6 +399,8 @@
     }
 
     function setEsqualsSelected() {
+
+        operation_recently_selected = true;
 
         equals_selected = true;
 
